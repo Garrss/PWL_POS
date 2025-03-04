@@ -11,14 +11,9 @@ class UserController extends Controller
 {
     public function index()
     {
-        // tambah data user dengan Eloquent Model
-        $data = [
-            'name'     => 'Pelanggan Pertama',
-        ];
-        UserModel::where('username', 'customer-1')->update($data); // Add new user to m_user table
-
-        // Coba akses model UserModel
-        $user = UserModel::all(); // ambil semua data dari tabel m_user
-        return view('user', ['data' => $data]);
+        $user = UserModel::findOr(20, ['username', 'name'], function () {
+            abort(404);
+        });
+        return view('user', ['data' => $user]);
     }
 }
