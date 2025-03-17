@@ -54,15 +54,15 @@
 
             <li class="nav-header">Transaction Data</li> 
             <li class="nav-item"> 
-                <a href="{{ url('/stock') }}" class="nav-link {{ ($activeMenu == 'stock') ? 'active' : '' }}"> 
+                <a href="{{ url('/barang') }}" class="nav-link {{ ($activeMenu == 'barang') ? 'active' : '' }}"> 
                     <i class="nav-icon fas fa-cubes"></i> 
-                    <p>Stock of Goods</p> 
+                    <p>Goods List</p> 
                 </a> 
             </li> 
             <li class="nav-item"> 
-                <a href="{{ url('/sales') }}" class="nav-link {{ ($activeMenu == 'sales') ? 'active' : '' }}"> 
+                <a href="{{ url('/supplier') }}" class="nav-link {{ ($activeMenu == 'supplier') ? 'active' : '' }}"> 
                     <i class="nav-icon fas fa-cash-register"></i> 
-                    <p>Sales Transactions</p> 
+                    <p>Supplier List</p> 
                 </a> 
             </li> 
         </ul> 

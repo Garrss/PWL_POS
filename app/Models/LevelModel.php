@@ -13,6 +13,13 @@ class LevelModel extends Model
     protected $table = 'm_level'; // Explicitly define the correct table name
     protected $primaryKey = 'level_id'; // Define the primary key
 
+    /**
+     * The attributes that are mass assignable
+     * 
+     *  @var array
+     */
+    protected $fillable = ['level_id', 'level_kode', 'level_nama'];
+
     public function users(): HasMany
     {
         return $this->hasMany(UserModel::class, 'level_id', 'level_id');
