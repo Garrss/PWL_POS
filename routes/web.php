@@ -8,13 +8,16 @@ use App\Http\Controllers\welcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\RegisterController;
 
 Route::pattern('id', '[0-9]+');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'postlogin']);
 Route::get('logout', [AuthController::class, 'logout'])->middleware('auth');
+
+Route::get('register', [RegisterController::class, 'register'])->name('register');
+Route::post('register', [RegisterController::class, 'postregister'])->name('register.post');
 
 Route::middleware(['auth'])->group(function () {
     // Route::get('/level', [LevelController::class, 'index']);
