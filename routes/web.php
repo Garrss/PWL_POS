@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
     // artinya semua route di dalam group ini harus punya role ADM (Administrator)
-    Route::middleware(['authorize:ADM'])->prefix('level')->group(function () {
+    Route::middleware(['authorize:ADM,MNG'])->prefix('level')->group(function () {
         Route::get('/', [LevelController::class, 'index']);
         Route::post('/list', [LevelController::class, 'list']);
         Route::get('/create', [LevelController::class, 'create']);
