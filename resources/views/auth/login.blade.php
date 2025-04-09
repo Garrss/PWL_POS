@@ -52,9 +52,11 @@
               <label for="remember">Remember Me</label>
             </div>
           </div>
-          <div class="col-6">
+          <!-- /.col -->
+          <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
+          <!-- /.col -->
         </div>
       </form>
     </div>
