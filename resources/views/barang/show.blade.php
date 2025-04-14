@@ -22,9 +22,9 @@
                         <th>Nama Barang</th>
                         <td>{{ $barang->barang_nama }}</td>
                     </tr>
-                    <tr>
-                        <th>Kategori</th>
-                        <td>{{ $barang->kategori_id }}</td>
+                   <tr>
+                    <th>Kategori</th>
+                    <td>{{ $barang->kategori->kategori_nama ?? 'Tidak ada' }}</td>
                     </tr>
                     <tr>
                         <th>Harga Beli</th>

@@ -13,12 +13,15 @@ class BarangModel extends Model
     protected $table = 'm_barang'; // Explicitly define the correct table name
     protected $primaryKey = 'barang_id'; // Define the primary key
 
-    public $timestamps = false; // Jika tidak ada timestamps (created_at, updated_at)
-
-    protected $fillable = ['barang_id', 'kategori_id', 'barang_kode', 'barang_nama', 'harga_beli', 'harga_jual']; // Pastikan kolom bisa diisi
+    protected $fillable = ['barang_id', 'kategori_id', 'barang_kode', 'barang_kode', 'barang_nama', 'harga_beli', 'harga_jual']; // Pastikan kolom bisa diisi
 
     public function users(): HasMany
     {
         return $this->hasMany(UserModel::class, 'barang_id', 'barang_id');
+    }
+
+    public function kategori()
+    {
+        return $this->belongsTo(KategoriModel::class, 'kategori_id', 'kategori_id');
     }
 }
