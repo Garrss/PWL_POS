@@ -99,12 +99,13 @@ class UserController extends Controller
 
         $activeMenu = 'user'; // set menu yang sedang aktif
 
-        return view('user.show', [
+        return view('user.show_ajax', [
             'breadcrumb' => $breadcrumb,
             'page' => $page,
             'user' => $user,
             'activeMenu' => $activeMenu
         ]);
+
     }
     // Menampilkan halaman form edit user
     public function edit(string $id)
@@ -193,7 +194,7 @@ class UserController extends Controller
         return DataTables::of($users)
             ->addIndexColumn() // Adds an index/no sort column (default column name: DT_RowIndex)
             ->addColumn('action', function ($user) { // Add action column  
-                $btn = '<button onclick="modalAction(\'' . url('/user/' . $user->user_id . '/show_ajax') . '\')" 
+                $btn = '<button onclick="modalAction(\'' . url('/user/' . $user->user_id ) . '\')" 
                         class="btn btn-info btn-sm">Detail</button> ';
 
                 $btn .= '<button onclick="modalAction(\'' . url('/user/' . $user->user_id . '/edit_ajax') . '\')" 

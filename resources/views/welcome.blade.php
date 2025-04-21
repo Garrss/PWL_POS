@@ -25,10 +25,10 @@
                         <b>Email</b> <span class="float-right">07mtegar@email.com</span>
                     </li>
                     <li class="list-group-item">
-                        <b>Asal</b> <span class="float-right">Kota Malang</span>
+                        <b>Country</b> <span class="float-right">Kota Malang</span>
                     </li>
                     <li class="list-group-item">
-                        <b>Bidang</b> <span class="float-right">Teknik Informatika</span>
+                        <b>Prodi</b> <span class="float-right">Teknik Informatika</span>
                     </li>
                 </ul>
             </div>
@@ -39,7 +39,7 @@
         <!-- Upload Photo Form -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Upload Foto Profil</h3>
+                <h3 class="card-title">Upload Foto Profile</h3>
             </div>
             <div class="card-body">
                 <form action="{{ route('profile.upload') }}" method="POST" enctype="multipart/form-data">
