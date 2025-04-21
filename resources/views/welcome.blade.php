@@ -7,10 +7,11 @@
         <!-- Profile Card -->
         <div class="card card-primary card-outline">
             <div class="card-body box-profile text-center">
-                @if (session('photo'))
-                    <img class="profile-user-img img-fluid img-circle"
-                         src="{{ asset('storage/' . session('photo')) }}"
-                         alt="User profile picture">
+                @if (session()->has('photo'))
+                   <img class="profile-user-img img-fluid img-circle"
+                    src="{{ asset('storage/' . session('photo')) . '?v=' . time() }}"
+                     alt="User profile picture">
+
                 @else
                     <img class="profile-user-img img-fluid img-circle"
                          src="https://ui-avatars.com/api/?name=User&background=random"
