@@ -162,7 +162,7 @@ class BarangController extends Controller
 
     public function create_ajax()
     {
-        $kategoriList = BarangModel::all(); // Fetch all kategori data
+        $kategoriList = KategoriModel::all(); // Perbaikan: ambil data kategori yang benar
         return view('barang.create_ajax', compact('kategoriList'));
     }
 
