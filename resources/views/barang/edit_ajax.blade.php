@@ -29,6 +29,7 @@
                 </button>
             </div>
             <div class="modal-body">
+                
                 <div class="form-group">
                     <label>Barang Kode</label>
                     <input value="{{ $barang->barang_kode }}" type="text" name="barang_kode" id="barang_kode" class="form-control" required>

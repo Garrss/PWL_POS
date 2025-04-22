@@ -39,11 +39,7 @@
                     <input value="{{ $level->level_nama }}" type="text" name="level_nama" id="level_nama" class="form-control" required>
                     <small id="error-level_nama" class="error-text form-text text-danger"></small>
                 </div>
-                <div class="form-group">
-                    <label>Description</label>
-                    <textarea name="level_description" id="level_description" class="form-control" required>{{ $level->level_description }}</textarea>
-                    <small id="error-level_description" class="error-text form-text text-danger"></small>
-                </div>
+                
             </div>
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" class="btn btn-warning">Cancel</button>
