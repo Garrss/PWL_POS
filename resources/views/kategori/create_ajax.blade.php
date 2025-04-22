@@ -16,13 +16,13 @@
                 </div>
                 <div class="form-group">
                     <label>Kategori Level</label>
-                    <input type="text" name="level_kategori" id="level_kategori" class="form-control" required>
-                    <small id="error-level_kategori" class="error-text form-text text-danger"></small>
+                    <input type="text" name="kategori_kode" id="kategori_kode" class="form-control" required>
+                    <small id="error-kategori_kode" class="error-text form-text text-danger"></small>
                 </div>
                 <div class="form-group">
                     <label>Kategori Name</label>
-                    <input type="text" name="nama_kategori" id="nama_kategori" class="form-control" required>
-                    <small id="error-nama_kategori" class="error-text form-text text-danger"></small>
+                    <input type="text" name="kategori_nama" id="kategori_nama" class="form-control" required>
+                    <small id="error-kategori_nama" class="error-text form-text text-danger"></small>
                 </div>
             </div>
             <div class="modal-footer">
