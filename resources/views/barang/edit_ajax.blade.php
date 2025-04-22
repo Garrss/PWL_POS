@@ -41,6 +41,11 @@
                     <small id="error-barang_nama" class="error-text form-text text-danger"></small>
                 </div>
                 <div class="form-group">
+                    <label>Kategori</label>
+                    <input value="{{ $barang->kategori_id }}" type="text" name="kategori_id" id="kategori_id" class="form-control" required>
+                    <small id="error-kategori_id" class="error-text form-text text-danger"></small>
+                </div>
+                <div class="form-group">
                     <label>Harga Beli</label>
                     <input value="{{ $barang->harga_beli }}" type="number" name="harga_beli" id="harga_beli" class="form-control" required>
                     <small id="error-harga_beli" class="error-text form-text text-danger"></small>

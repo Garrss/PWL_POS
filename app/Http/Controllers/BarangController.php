@@ -168,6 +168,7 @@ class BarangController extends Controller
 
     public function store_ajax(Request $request)
     {
+        
         if ($request->ajax() || $request->wantsJson()) {
             $rules = [
                 'kategori_id' => 'required|integer',
